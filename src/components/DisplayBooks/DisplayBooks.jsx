@@ -21,7 +21,7 @@ const DisplayBooks = () => {
         <div className="mt-[100px]">
             <h1 className="text-4xl font-bold text-center mb-9 playfair-display-font">Books</h1>
 
-            <div className="grid grid-cols-3 gap-10">
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10">
                 {
                     books.map((book) => (<NavLink key={book.bookId} to={`/bookdetails/${book.bookId}`}>
                         <BooksCards
