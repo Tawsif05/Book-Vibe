@@ -13,6 +13,7 @@ import ListedBooks from './components/ListedBooks/ListedBooks.jsx';
 import PagestoReadGraph from './components/PagestoReadGraph/PagestoReadGraph.jsx';
 import AboutUs from './components/AboutUs/AboutUs.jsx';
 import BookClub from './components/BookClub/BookClub.jsx';
+import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
 
 
 
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement:<ErrorPage></ErrorPage>,
     children: [
       {
         path: '/',
