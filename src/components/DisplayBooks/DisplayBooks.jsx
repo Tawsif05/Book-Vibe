@@ -23,7 +23,7 @@ const DisplayBooks = () => {
 
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10">
                 {
-                    books.map((book) => (<NavLink key={book.bookId} to={`/bookdetails/${book.bookId}`}>
+                    books.map((book) => (<NavLink key={book.bookId} to={`./bookdetails/${book.bookId}`}>
                         <BooksCards
                         book={book}
                         ></BooksCards>
