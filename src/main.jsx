@@ -26,32 +26,32 @@ const router = createBrowserRouter([
     errorElement:<ErrorPage></ErrorPage>,
     children: [
       {
-        path: '/',
+        path: './',
         element: <Home></Home>
       },
       {
-        path: "/bookdetails/:id",
-        loader: () => fetch("../public/books.json"),
+        path: "./bookdetails/:id",
+        loader: () => fetch("../books.json"),
         element: <BookDetails ></BookDetails>
       },
       {
-        path: '/listedbooks',
+        path: './listedbooks',
         element: <ListedBooks></ListedBooks>,
-        loader: ()=> fetch('../public/books.json')
+        loader: ()=> fetch('../books.json')
       },
       {
-        path: '/readingpagechart',
+        path: './readingpagechart',
         element: <PagestoReadGraph></PagestoReadGraph>,
-        loader: ()=> fetch("../public/books.json")
+        loader: ()=> fetch("../books.json")
       },
       {
         path: '/aboutus',
         element: <AboutUs></AboutUs>
       },
       {
-        path: '/bookclub',
+        path: './bookclub',
         element: <BookClub></BookClub>,
-        loader: ()=> fetch('../public/booksclub.json')
+        loader: ()=> fetch('../booksclub.json')
       }
     ]
   },
