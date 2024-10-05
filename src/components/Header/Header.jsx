@@ -27,6 +27,7 @@ const Header = () => {
                             <li><NavLink to="/">Home</NavLink></li>
                             <li><NavLink to="/listedbooks">Listed Books</NavLink></li>
                             <li><NavLink to="/readingpagechart">Pages to Read</NavLink></li>
+                            <li><NavLink to="/bookclub">Book Club</NavLink></li>
                             <li><NavLink to="/aboutus">About Us</NavLink></li>
                         </ul>
                     </div>
@@ -37,6 +38,7 @@ const Header = () => {
                         <li><NavLink to="/">Home</NavLink></li>
                         <li><NavLink to="/listedbooks">Listed Books</NavLink></li>
                         <li><NavLink to="/readingpagechart">Pages to Read</NavLink></li>
+                        <li><NavLink to="/bookclub">Book Club</NavLink></li>
                         <li><NavLink to="/aboutus">About Us</NavLink></li>
                     </ul>
                 </div>

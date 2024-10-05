@@ -12,6 +12,7 @@ import Home from './components/Home/Home.jsx';
 import ListedBooks from './components/ListedBooks/ListedBooks.jsx';
 import PagestoReadGraph from './components/PagestoReadGraph/PagestoReadGraph.jsx';
 import AboutUs from './components/AboutUs/AboutUs.jsx';
+import BookClub from './components/BookClub/BookClub.jsx';
 
 
 
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: '/aboutus',
         element: <AboutUs></AboutUs>
+      },
+      {
+        path: '/bookclub',
+        element: <BookClub></BookClub>
       }
     ]
   },
