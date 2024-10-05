@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import { Bar, BarChart, CartesianGrid, Cell, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
 import PropTypes from 'prop-types';
+import { getStoredRead } from "../../utility/localStorage";
 
 const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
 
@@ -11,13 +12,25 @@ const TriangleBar = (props) => {
 
 const PagestoReadGraph = () => {
     const data = useLoaderData();
+    const data1 = getStoredRead()
+    console.log(data1);
+    let finalData = [];
+    for(const mydata of data1){
+        console.log(mydata);
+        const singledata = data.find(d=> d.bookId == mydata);
+        if(singledata){
+            finalData.push(singledata);
+        }
+        
+    }
+    
 
-    if (!data) {
+    if (!finalData) {
         return <div>Loading...</div>;
     }
 
     
-    const chartData = data.map(book => ({
+    const chartData = finalData.map(book => ({
         name: book.bookName,
         Pages: book.totalPages 
     }));
