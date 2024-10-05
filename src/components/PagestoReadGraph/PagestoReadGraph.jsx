@@ -30,7 +30,7 @@ const PagestoReadGraph = () => {
         <ResponsiveContainer width="100%" height={500} className='mt-10'>
             <BarChart data={chartData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
                 <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey='name' label={{ value: 'Books', position: 'insideBottomRight', offset: 0 }} />
+                <XAxis dataKey='name' label={{ value: 'Books', position: 'insideBottom', offset: 0 }} />
                 <YAxis label={{ value: 'Pages', angle: -90, position: 'insideLeft' }} />
                 <Tooltip />
                 <Bar dataKey="Pages" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>

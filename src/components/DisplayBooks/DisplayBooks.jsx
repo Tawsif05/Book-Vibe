@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import BooksCards from "../BooksCard/BooksCards";
 import { NavLink } from "react-router-dom";
+import "./DisplayBooks.css"
 const DisplayBooks = () => {
 
     const [books, setBooks] = useState([]);
@@ -18,7 +19,7 @@ const DisplayBooks = () => {
     return (
 
         <div className="mt-[100px]">
-            <h1 className="text-4xl font-bold text-center mb-9">Books</h1>
+            <h1 className="text-4xl font-bold text-center mb-9 playfair-display-font">Books</h1>
 
             <div className="grid grid-cols-3 gap-10">
                 {

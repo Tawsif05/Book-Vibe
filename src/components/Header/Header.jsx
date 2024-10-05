@@ -1,9 +1,9 @@
 import { NavLink } from "react-router-dom";
-
+import './Header.css'
 
 const Header = () => {
     return (
-        <div>
+        <div className="work-sans-font">
             <div className="navbar bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">

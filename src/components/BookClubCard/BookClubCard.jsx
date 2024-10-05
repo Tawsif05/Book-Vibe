@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import "./BookClubCard.css"
 
 const BookClubCard = ({club}) => {
     const {clubName, meetingFrequency, description,location, contactEmail, rating, category} = club;
@@ -14,7 +15,7 @@ const BookClubCard = ({club}) => {
                         
                     </div>
                     <div className="flex gap-6">
-                        <div>
+                        <div className='work-sans-font'>
                             {description}
                         </div>
                         
