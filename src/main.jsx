@@ -11,6 +11,7 @@ import BookDetails from './components/BookDetails/BookDetails.jsx';
 import Home from './components/Home/Home.jsx';
 import ListedBooks from './components/ListedBooks/ListedBooks.jsx';
 import PagestoReadGraph from './components/PagestoReadGraph/PagestoReadGraph.jsx';
+import AboutUs from './components/AboutUs/AboutUs.jsx';
 
 
 
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
         path: '/readingpagechart',
         element: <PagestoReadGraph></PagestoReadGraph>,
         loader: ()=> fetch("../books.json")
+      },
+      {
+        path: '/aboutus',
+        element: <AboutUs></AboutUs>
       }
     ]
   },
