@@ -4,27 +4,33 @@
         "clubName": "The Classic Readers",
         "description": "Join us as we explore classic literature and discuss its impact on modern storytelling.",
         "meetingFrequency": "Monthly",
-        "location": "Local Library, Room 101",
+        "location": "Local Library",
         "image": "https://example.com/classic_readers.jpg",
-        "contactEmail": "classicreaders@example.com"
+        "contactEmail": "classicreader@example.com",
+        "rating": 4.5,
+        "category": "Classic"
     },
     {
         "clubId": 2,
         "clubName": "Thriller Enthusiasts",
         "description": "A club for lovers of thrillers and suspense novels. Get ready for intense discussions!",
         "meetingFrequency": "Bi-weekly",
-        "location": "Coffeehouse Downtown",
+        "location": "Coffeehouse",
         "image": "https://example.com/thriller_enthusiasts.jpg",
-        "contactEmail": "thrillerenthusiasts@example.com"
+        "contactEmail": "thriller@example.com",
+        "rating": 4.7,
+        "category": "Thriller"
     },
     {
         "clubId": 3,
         "clubName": "Fantasy Fanatics",
         "description": "Dive into the worlds of fantasy and magic. Perfect for those who love dragons, wizards, and epic quests!",
         "meetingFrequency": "Weekly",
-        "location": "Community Center, Room B",
+        "location": "Community Center",
         "image": "https://example.com/fantasy_fanatics.jpg",
-        "contactEmail": "fantasyfanatics@example.com"
+        "contactEmail": "fantasyfa@example.com",
+        "rating": 4.3,
+        "category": "Fantasy"
     },
     {
         "clubId": 4,
@@ -33,7 +39,9 @@
         "meetingFrequency": "Monthly",
         "location": "Bookstore Cafe",
         "image": "https://example.com/mystery_solvers.jpg",
-        "contactEmail": "mysterysolvers@example.com"
+        "contactEmail": "mysterysolvers@example.com",
+        "rating": 4.4,
+        "category": "Mystery"
     },
     {
         "clubId": 5,
@@ -42,7 +50,9 @@
         "meetingFrequency": "Bi-weekly",
         "location": "Park Picnic Area",
         "image": "https://example.com/romance_readers.jpg",
-        "contactEmail": "romancereaders@example.com"
+        "contactEmail": "romancereaders@example.com",
+        "rating": 4.6,
+        "category": "Romance"
     },
     {
         "clubId": 6,
@@ -51,6 +61,8 @@
         "meetingFrequency": "Monthly",
         "location": "Online (Zoom)",
         "image": "https://example.com/sci_fi_society.jpg",
-        "contactEmail": "scifisociety@example.com"
+        "contactEmail": "scifisociety@example.com",
+        "rating": 4.7,
+        "category": "Science"
     }
 ]
