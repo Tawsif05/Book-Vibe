@@ -6,19 +6,19 @@ import AllListedBooks from "../AllListedBooks/AllListedBooks";
 
 const ListedBooks = () => {
     const books = useLoaderData();
-    const [activeTab, setActiveTab] = useState('something'); // State for active tab
+    const [activeTab, setActiveTab] = useState('something');
     const [arrOfReadBooks, setArrOfReadBooks] = useState([]);
     const [arrOfListBooks, setArrOfListBooks] = useState([]);
-    const [selectedCategory, setSelectedCategory] = useState(''); // State for selected category
-    const [filteredBooks, setFilteredBooks] = useState([]); // To store filtered books
+    const [selectedSortCriterion, setSelectedSortCriterion] = useState('');
+    const [filteredBooks, setFilteredBooks] = useState([]);
 
     useEffect(() => {
         const storedBooksIds = getStoredRead();
         const readBooks = storedBooksIds.map(id => books.find(book => book.bookId == id)).filter(book => book);
         setArrOfReadBooks(readBooks);
 
-        const storedlistedBooksIds = getStoredWish();
-        const wishlistedBooks = storedlistedBooksIds.map(id => books.find(book => book.bookId == id)).filter(book => book);
+        const storedListedBooksIds = getStoredWish();
+        const wishlistedBooks = storedListedBooksIds.map(id => books.find(book => book.bookId == id)).filter(book => book);
         setArrOfListBooks(wishlistedBooks);
 
         
@@ -27,34 +27,52 @@ const ListedBooks = () => {
 
     const handleTabClick = (tab) => {
         setActiveTab(tab);
-        setSelectedCategory(''); 
+        setSelectedSortCriterion('');
     };
 
-    const handleCategoryChange = (event) => {
-        const category = event.target.value;
-        setSelectedCategory(category);
-
-        const booksToFilter = activeTab === 'something' ? arrOfReadBooks : arrOfListBooks;
-
-        if (category) {
-            const filtered = booksToFilter.filter(book => book.category === category);
-            setFilteredBooks(filtered);
-        } else {
-            setFilteredBooks(booksToFilter);
-        }
-    };
-
+    const handleSortChange = (event) => {
+        const criterion = event.target.value;
+        setSelectedSortCriterion(criterion);
     
-    const categories = [...new Set(books.map(book => book.category))];
+        const booksToSort = activeTab === 'something' ? arrOfReadBooks : arrOfListBooks;
+    
+        let sortedBooks;
+        if (criterion) {
+            sortedBooks = [...booksToSort].sort((a, b) => {
+                switch (criterion) {
+                    case 'rating':
+                        return b.rating - a.rating; // Higher rating first
+                    case 'pages':
+                        return b.totalPages - a.totalPages; // More pages first
+                    case 'year':
+                        return b.yearOfPublishing - a.yearOfPublishing; // More recent year first
+                    default:
+                        return 0;
+                }
+            });
+        } else {
+            sortedBooks = booksToSort;
+        }
+    
+        setFilteredBooks(sortedBooks);
+    };
+    
+
+
+    const sortOptions = [
+        { value: '', label: 'Sort By' },
+        { value: 'rating', label: 'Rating' },
+        { value: 'pages', label: 'Number of Pages' },
+        { value: 'year', label: 'Publishing Year' },
+    ];
 
     return (
         <div>
             <h1 className="h-24 bg-[#1313130D] text-black text-3xl font-bold rounded-3xl flex items-center justify-center">Books</h1>
             <div className="mt-8 flex justify-center">
-                <select className="text-white bg-green-500 btn" onChange={handleCategoryChange} value={selectedCategory}>
-                    <option className="" value="">Sort By</option>
-                    {categories.map(category => (
-                        <option className="bg-white text-black" key={category} value={category}>{category}</option>
+                <select className="text-white bg-green-500 btn" onChange={handleSortChange} value={selectedSortCriterion}>
+                    {sortOptions.map(option => (
+                        <option className="bg-white text-black" key={option.value} value={option.value}>{option.label}</option>
                     ))}
                 </select>
             </div>
