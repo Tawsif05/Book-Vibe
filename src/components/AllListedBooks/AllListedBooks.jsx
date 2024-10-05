@@ -3,9 +3,10 @@ import { IoDocumentOutline } from "react-icons/io5";
 import { CiLocationOn } from "react-icons/ci";
 import PropTypes from 'prop-types';
 import './AllListedBooks.css'
+import { Link } from "react-router-dom";
 
-const AllListedBooks = ({book}) => {
-    const { image, author, bookName, category, rating, tags, totalPages, yearOfPublishing, publisher } = book;
+const AllListedBooks = ({ book }) => {
+    const { bookId,image, author, bookName, category, rating, tags, totalPages, yearOfPublishing, publisher } = book;
     return (
         <div className="border rounded-3xl">
             <div className="card card-side bg-base-100 shadow-xl p-5">
@@ -36,7 +37,7 @@ const AllListedBooks = ({book}) => {
                             <h1><IoDocumentOutline /></h1>
                             <h1>Page: {totalPages}</h1>
                         </div>
-                        
+
                     </div>
                     <hr />
                     <div className="flex gap-5 work-sans-font">
@@ -46,9 +47,11 @@ const AllListedBooks = ({book}) => {
                         <div className="bg-[#FFAC3326] p-3 rounded-full text-[#FFAC33] px-4" >
                             Rating: {rating}
                         </div>
-                        <div className="bg-green-500 p-3 rounded-full text-white px-4" >
-                            View Detail
-                        </div>
+                        <Link to={`/bookdetails/${bookId}`}>
+                            <div className="bg-green-500 p-3 rounded-full text-white px-4" >
+                                View Detail
+                            </div>
+                        </Link>
                     </div>
                 </div>
             </div>
