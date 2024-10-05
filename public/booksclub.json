@@ -1,0 +1,56 @@
+[
+    {
+        "clubId": 1,
+        "clubName": "The Classic Readers",
+        "description": "Join us as we explore classic literature and discuss its impact on modern storytelling.",
+        "meetingFrequency": "Monthly",
+        "location": "Local Library, Room 101",
+        "image": "https://example.com/classic_readers.jpg",
+        "contactEmail": "classicreaders@example.com"
+    },
+    {
+        "clubId": 2,
+        "clubName": "Thriller Enthusiasts",
+        "description": "A club for lovers of thrillers and suspense novels. Get ready for intense discussions!",
+        "meetingFrequency": "Bi-weekly",
+        "location": "Coffeehouse Downtown",
+        "image": "https://example.com/thriller_enthusiasts.jpg",
+        "contactEmail": "thrillerenthusiasts@example.com"
+    },
+    {
+        "clubId": 3,
+        "clubName": "Fantasy Fanatics",
+        "description": "Dive into the worlds of fantasy and magic. Perfect for those who love dragons, wizards, and epic quests!",
+        "meetingFrequency": "Weekly",
+        "location": "Community Center, Room B",
+        "image": "https://example.com/fantasy_fanatics.jpg",
+        "contactEmail": "fantasyfanatics@example.com"
+    },
+    {
+        "clubId": 4,
+        "clubName": "Mystery Solvers",
+        "description": "Join us to unravel mysteries and discuss your favorite whodunits. Bring your detective skills!",
+        "meetingFrequency": "Monthly",
+        "location": "Bookstore Cafe",
+        "image": "https://example.com/mystery_solvers.jpg",
+        "contactEmail": "mysterysolvers@example.com"
+    },
+    {
+        "clubId": 5,
+        "clubName": "Romance Readers",
+        "description": "For those who love a good love story. Discuss romantic novels and share your favorites!",
+        "meetingFrequency": "Bi-weekly",
+        "location": "Park Picnic Area",
+        "image": "https://example.com/romance_readers.jpg",
+        "contactEmail": "romancereaders@example.com"
+    },
+    {
+        "clubId": 6,
+        "clubName": "Sci-Fi Society",
+        "description": "Explore the realms of science fiction and discuss futuristic concepts and ideas.",
+        "meetingFrequency": "Monthly",
+        "location": "Online (Zoom)",
+        "image": "https://example.com/sci_fi_society.jpg",
+        "contactEmail": "scifisociety@example.com"
+    }
+]

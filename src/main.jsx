@@ -29,18 +29,18 @@ const router = createBrowserRouter([
       },
       {
         path: "/bookdetails/:id",
-        loader: () => fetch("../books.json"),
+        loader: () => fetch("../public/books.json"),
         element: <BookDetails ></BookDetails>
       },
       {
         path: '/listedbooks',
         element: <ListedBooks></ListedBooks>,
-        loader: ()=> fetch('../books.json')
+        loader: ()=> fetch('../public/books.json')
       },
       {
         path: '/readingpagechart',
         element: <PagestoReadGraph></PagestoReadGraph>,
-        loader: ()=> fetch("../books.json")
+        loader: ()=> fetch("../public/books.json")
       },
       {
         path: '/aboutus',
@@ -48,7 +48,8 @@ const router = createBrowserRouter([
       },
       {
         path: '/bookclub',
-        element: <BookClub></BookClub>
+        element: <BookClub></BookClub>,
+        loader: ()=> fetch('../public/booksclub.json')
       }
     ]
   },
