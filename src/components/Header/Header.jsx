@@ -24,22 +24,42 @@ const Header = () => {
                         <ul
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow space-x-8">
-                            <li><NavLink to="/">Home</NavLink></li>
-                            <li><NavLink to="/listedbooks">Listed Books</NavLink></li>
-                            <li><NavLink to="/readingpagechart">Pages to Read</NavLink></li>
-                            <li><NavLink to="/bookclub">Book Club</NavLink></li>
-                            <li><NavLink to="/aboutus">About Us</NavLink></li>
+                            <li><NavLink className={({ isActive }) =>
+                                isActive ? 'border border-green-600 text-green-500 font-bold' : 'text-gray-700'
+                            } to="/">Home</NavLink></li>
+                            <li><NavLink className={({ isActive }) =>
+                                isActive ? 'border border-green-600 text-green-500 font-bold' : 'text-gray-700'
+                            } to="/listedbooks">Listed Books</NavLink></li>
+                            <li><NavLink className={({ isActive }) =>
+                                isActive ? 'border border-green-600 text-green-500 font-bold' : 'text-gray-700'
+                            } to="/readingpagechart">Pages to Read</NavLink></li>
+                            <li><NavLink className={({ isActive }) =>
+                                isActive ? 'border border-green-600 text-green-500 font-bold' : 'text-gray-700'
+                            } to="/bookclub">Book Club</NavLink></li>
+                            <li><NavLink className={({ isActive }) =>
+                                isActive ? 'border border-green-600 text-green-500 font-bold' : 'text-gray-700'
+                            } to="/aboutus">About Us</NavLink></li>
                         </ul>
                     </div>
                     <a className="btn btn-ghost text-xl">Book Vibe</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 space-x-8">
-                        <li><NavLink to="/">Home</NavLink></li>
-                        <li><NavLink to="/listedbooks">Listed Books</NavLink></li>
-                        <li><NavLink to="/readingpagechart">Pages to Read</NavLink></li>
-                        <li><NavLink to="/bookclub">Book Club</NavLink></li>
-                        <li><NavLink to="/aboutus">About Us</NavLink></li>
+                        <li><NavLink className={({ isActive }) =>
+                            isActive ? 'border border-green-600 text-green-500 font-bold' : 'text-gray-700'
+                        } to="/">Home</NavLink></li>
+                        <li><NavLink className={({ isActive }) =>
+                            isActive ? 'border border-green-600 text-green-500 font-bold' : 'text-gray-700'
+                        } to="/listedbooks">Listed Books</NavLink></li>
+                        <li><NavLink className={({ isActive }) =>
+                            isActive ? 'border border-green-600 text-green-500 font-bold' : 'text-gray-700'
+                        } to="/readingpagechart">Pages to Read</NavLink></li>
+                        <li><NavLink className={({ isActive }) =>
+                            isActive ? 'border border-green-600 text-green-500 font-bold' : 'text-gray-700'
+                        } to="/bookclub">Book Club</NavLink></li>
+                        <li><NavLink className={({ isActive }) =>
+                            isActive ? 'border border-green-600 text-green-500 font-bold' : 'text-gray-700'
+                        } to="/aboutus">About Us</NavLink></li>
                     </ul>
                 </div>
                 <div className="navbar-end space-x-2">
