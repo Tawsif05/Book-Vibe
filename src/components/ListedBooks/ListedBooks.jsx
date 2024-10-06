@@ -14,11 +14,11 @@ const ListedBooks = () => {
 
     useEffect(() => {
         const storedBooksIds = getStoredRead();
-        const readBooks = storedBooksIds.map(id => books.find(book => book.bookId == id)).filter(book => book);
+        const readBooks = storedBooksIds?.map(id => books?.find(book => book.bookId == id))?.filter(book => book);
         setArrOfReadBooks(readBooks);
 
         const storedListedBooksIds = getStoredWish();
-        const wishlistedBooks = storedListedBooksIds.map(id => books.find(book => book.bookId == id)).filter(book => book);
+        const wishlistedBooks = storedListedBooksIds?.map(id => books?.find(book => book.bookId == id))?.filter(book => book);
         setArrOfListBooks(wishlistedBooks);
 
         
@@ -95,7 +95,7 @@ const ListedBooks = () => {
                 <div className="mt-8">
                     {(activeTab === 'something' ? arrOfReadBooks : arrOfListBooks).length > 0 ? (
                         <div className="space-y-8">
-                            {filteredBooks.map(book => (
+                            {filteredBooks?.map(book => (
                                 <AllListedBooks book={book} key={book.bookId}></AllListedBooks>
                             ))}
                         </div>
