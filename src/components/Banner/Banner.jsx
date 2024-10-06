@@ -17,7 +17,7 @@ const Banner = () => {
                 </div>
             </div>
             <div>
-                <img src="../../../public/dragon book.webp" alt="" />
+                <img src="dragon book.webp" alt="" />
             </div>
         </div>
     );

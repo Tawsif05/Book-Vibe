@@ -11,6 +11,8 @@ import { saveStoredWish } from "../../utility/wishLocalStorage";
 const BookDetails = () => {
 
     const books = useLoaderData();
+    console.log(books);
+    
     let { id } = useParams();
     const [isAdded, setIsAdded] = useState(false);
     const [isAdded1, setIsAdded1] = useState(false);
@@ -34,7 +36,7 @@ const BookDetails = () => {
         }
     }
 
-    const book = books.find(book => book.bookId == id)
+    const book = books?.find(book => book.bookId == id)
     const { image, author, bookName, category, rating, review, tags, totalPages, yearOfPublishing, publisher } = book;
 
 
