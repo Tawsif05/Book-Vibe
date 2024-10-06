@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import BooksCards from "../BooksCard/BooksCards";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./DisplayBooks.css"
 const DisplayBooks = () => {
 
@@ -23,11 +23,11 @@ const DisplayBooks = () => {
 
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10">
                 {
-                    books.map((book) => (<NavLink key={book.bookId} to={`./bookdetails/${book.bookId}`}>
+                    books.map((book) => (<Link key={book.bookId} to={`/bookdetails/${book.bookId}`}>
                         <BooksCards
                         book={book}
                         ></BooksCards>
-                    </NavLink>
+                    </Link>
 
                     ))
                 }
